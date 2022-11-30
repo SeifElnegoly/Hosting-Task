@@ -104,7 +104,7 @@
 .button {
      margin-top: 30px;
      border-radius: 50px;
-     width: 50%;
+     width: 70%;
      display: inline-block;
      background-color: brown;
      transition: 0.7s ease;
@@ -154,55 +154,524 @@ p>a:hover {
 }
 
 /* MEDIA QUERY */
-@media(max-width: 600px) {
+ /* Extra small devices (phones, 600px and down) */
+@media all and (max-width: 600px) {
      .header {
-         height: 67px;
-     }
- 
-         .header .logo {
-             width: 65px;
-             height: 40px;
-             margin: 16px;
-         }
- 
-         .header .nav-bar a {
-             padding: 0;
-         }
- 
-     .nav-bar {
-         width: 90%;
-         padding-bottom: 20px;
-     }
- 
-     .containerOne h1 {
-         font-size: 40px;
-     }
- 
-     .cards {
-         flex-direction: column;
-     }
- 
-     .firstCard, .secondCard, .thirdCard {
-         width: 100%;
-         flex: 0 0 100%;
-         max-width: 100%;
-     }
- 
-     .button {
-         width: 73%;
-         height: 33px;
-         padding: 3px;
-     }
- 
-     .containerTwo .rowOne {
-         flex-direction: column;
-     }
- 
-         .containerTwo .rowOne p {
-             text-align: justify;
-         }
- 
-     .footer {
-         font-size: 17px;
-     }
- }
+          height: 67px;
+      }
+  
+          .header .logo {
+              width: 65px;
+              height: 40px;
+              margin: 16px;
+          }
+  
+          .header .nav-bar a {
+              padding: 0;
+          }
+  
+      .nav-bar {
+          width: 90%;
+          padding-bottom: 20px;
+      }
+  
+      .containerOne h1 {
+          font-size: 40px;
+      }
+  
+      .cards {
+          flex-direction: column;
+      }
+  
+      .firstCard, .secondCard, .thirdCard {
+          width: 100%;
+          flex: 0 0 100%;
+          max-width: 100%;
+      }
+  
+      .button {
+          width: 100%;
+          height: 33px;
+          padding: 3px;
+      }
+  
+      .containerTwo .rowOne {
+          flex-direction: column;
+      }
+  
+          .containerTwo .rowOne p {
+              text-align: justify;
+          }
+  
+      .footer {
+          font-size: 17px;
+      }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media all and (min-width: 600px) {
+     * {
+          font-family: 'Poppins', sans-serif;
+          margin: 0;
+          padding: 0;
+          box-sizing: border-box;
+          scroll-behavior: smooth;
+      }
+      
+      .header {
+           width: 100%;
+           height: 80px;
+           background-image: linear-gradient(to right, #fb5283, #ff3527);
+           display: flex;
+           justify-content: space-between;
+           align-items: flex-end;
+           border-radius: 3px;
+           position: fixed;
+      }
+      .header .logo {
+           width: 70px;
+           height: 50px;
+           margin: 15px;
+      }
+      .header .nav-bar a {
+           display: inline-block;
+           text-decoration: none;
+           color: black;
+           font-size: 1.3em;
+           letter-spacing: 2px;
+           font-weight: 500;
+           padding: 25px;
+      }
+      .header .nav-bar a:hover {
+           background-color: rgba(128, 128, 128, 0.615);
+           color: white;
+      }
+      .containerOne {
+           background-image: url(bg.jpeg);
+           background-size: cover;
+           height: 550px;
+           background-attachment: fixed;
+           background-repeat: no-repeat;
+      }
+      .containerOne h1 {
+           text-align: center;
+           padding-top: 150px;
+           color: rgba(0, 0, 0, 0.666);
+           font-weight: 900;
+           font-size: 50px;
+           animation-name: fadeIn;
+           animation-duration: 3s;
+      }
+      
+      
+      .cards {
+           display: flex;
+           flex-direction: column;
+           text-align: center;
+           justify-content: center;
+           align-items: center;
+           margin: 50px;
+      }
+      
+      .cards .title1 {
+           background-color: rgba(0, 100, 0, 0.789);
+           color: azure;
+           width: 100%;
+           font-size: 1.8em;
+           padding: 50px;
+           margin-bottom: 30px;
+      }
+      .cards .title2 {
+           background-color: rgba(0, 0, 255, 0.718);
+           color: azure;
+           width: 100%;
+           font-size: 1.8em;
+           padding: 50px;
+           margin-bottom: 30px;
+      }
+      .cards .title3 {
+           background-color: rgba(0, 0, 0, 0.815);
+           color: azure;
+           width: 100%;
+           font-size: 1.8em;
+           padding: 50px;
+           margin-bottom: 30px;
+      }
+      
+      .firstCard,.secondCard,.thirdCard {
+           padding: 50px;
+           width: 80%;
+           background-color: azure;
+           box-shadow: 0 5px 25px rgba(1 1 1 / 30%);
+           margin: 30px;
+           border-radius: 30px;
+      }
+      
+      .cards .content p {
+           border-bottom: 1px solid darkblue;
+      }
+      
+      .button {
+           margin-top: 30px;
+           border-radius: 50px;
+           width: 70%;
+           display: inline-block;
+           background-color: brown;
+           transition: 0.7s ease;
+      }
+      .button a {
+           text-decoration: none;
+           font-size: 1.2em;
+           color: white;
+           font-weight: 400;
+           font-style: italic;
+      }
+      .button:hover {
+           transform: scale(1.1);
+      }
+      
+      
+      .containerTwo .rowOne {
+           display: flex;
+           flex-direction: row;
+           padding: 15px;
+           justify-content: center;
+      }
+      .containerTwo .rowOne p {
+           font-size: 1.1em;
+           margin: 30px;
+           padding: 15px;
+           border-radius: 5px;
+           transition: 0.5s ease;
+      
+      }
+      .containerTwo .rowOne p:hover {
+           background-color: darkgray;
+      }
+      .containerTwo .rowOne span {
+           font-size: larger;
+           font-weight: 600;
+           display: block;
+           text-align: center;
+      }
+      
+      p>a {
+           display: inline-block;
+           transition: 0.7s ease;
+      }
+      p>a:hover {
+           transform: scale(1.1);
+      }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media all and (min-width: 768px) {
+     * {
+          font-family: 'Poppins', sans-serif;
+          margin: 0;
+          padding: 0;
+          box-sizing: border-box;
+          scroll-behavior: smooth;
+      }
+      
+      .header {
+           width: 100%;
+           height: 80px;
+           background-image: linear-gradient(to right, #fb5283, #ff3527);
+           display: flex;
+           justify-content: space-between;
+           align-items: flex-end;
+           border-radius: 3px;
+           position: fixed;
+      }
+      .header .logo {
+           width: 70px;
+           height: 50px;
+           margin: 15px;
+      }
+      .header .nav-bar a {
+           display: inline-block;
+           text-decoration: none;
+           color: black;
+           font-size: 1.3em;
+           letter-spacing: 2px;
+           font-weight: 500;
+           padding: 25px;
+      }
+      .header .nav-bar a:hover {
+           background-color: rgba(128, 128, 128, 0.615);
+           color: white;
+      }
+      .containerOne {
+           background-image: url(bg.jpeg);
+           background-size: cover;
+           height: 550px;
+           background-attachment: fixed;
+           background-repeat: no-repeat;
+      }
+      .containerOne h1 {
+           text-align: center;
+           padding-top: 150px;
+           color: rgba(0, 0, 0, 0.666);
+           font-weight: 900;
+           font-size: 50px;
+           animation-name: fadeIn;
+           animation-duration: 3s;
+      }
+      
+      
+      .cards {
+           display: flex;
+           flex-direction: row;
+           text-align: center;
+           justify-content: center;
+           align-items: center;
+           margin: 50px;
+      }
+      
+      .cards .title1 {
+           background-color: rgba(0, 100, 0, 0.789);
+           color: azure;
+           width: 100%;
+           font-size: 1.8em;
+           padding: 50px;
+           margin-bottom: 30px;
+      }
+      .cards .title2 {
+           background-color: rgba(0, 0, 255, 0.718);
+           color: azure;
+           width: 100%;
+           font-size: 1.8em;
+           padding: 50px;
+           margin-bottom: 30px;
+      }
+      .cards .title3 {
+           background-color: rgba(0, 0, 0, 0.815);
+           color: azure;
+           width: 100%;
+           font-size: 1.8em;
+           padding: 50px;
+           margin-bottom: 30px;
+      }
+      
+      .firstCard,.secondCard,.thirdCard {
+           padding: 50px;
+           width: 80%;
+           background-color: azure;
+           box-shadow: 0 5px 25px rgba(1 1 1 / 30%);
+           margin: 30px;
+           border-radius: 30px;
+      }
+      
+      .cards .content p {
+           border-bottom: 1px solid darkblue;
+      }
+      
+      .button {
+           margin-top: 30px;
+           border-radius: 50px;
+           width: 70%;
+           display: inline-block;
+           background-color: brown;
+           transition: 0.7s ease;
+      }
+      .button a {
+           text-decoration: none;
+           font-size: 1.2em;
+           color: white;
+           font-weight: 400;
+           font-style: italic;
+      }
+      .button:hover {
+           transform: scale(1.1);
+      }
+      
+      
+      .containerTwo .rowOne {
+           display: flex;
+           flex-direction: row;
+           padding: 15px;
+           justify-content: center;
+      }
+      .containerTwo .rowOne p {
+           font-size: 1.1em;
+           margin: 30px;
+           padding: 15px;
+           border-radius: 5px;
+           transition: 0.5s ease;
+      
+      }
+      .containerTwo .rowOne p:hover {
+           background-color: darkgray;
+      }
+      .containerTwo .rowOne span {
+           font-size: larger;
+           font-weight: 600;
+           display: block;
+           text-align: center;
+      }
+      
+      p>a {
+           display: inline-block;
+           transition: 0.7s ease;
+      }
+      p>a:hover {
+           transform: scale(1.1);
+      }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media all and (min-width: 992px) {
+     * {
+          font-family: 'Poppins', sans-serif;
+          margin: 0;
+          padding: 0;
+          box-sizing: border-box;
+          scroll-behavior: smooth;
+      }
+      
+      .header {
+           width: 100%;
+           height: 80px;
+           background-image: linear-gradient(to right, #fb5283, #ff3527);
+           display: flex;
+           justify-content: space-between;
+           align-items: flex-end;
+           border-radius: 3px;
+           position: fixed;
+      }
+      .header .logo {
+           width: 70px;
+           height: 50px;
+           margin: 15px;
+      }
+      .header .nav-bar a {
+           display: inline-block;
+           text-decoration: none;
+           color: black;
+           font-size: 1.3em;
+           letter-spacing: 2px;
+           font-weight: 500;
+           padding: 25px;
+      }
+      .header .nav-bar a:hover {
+           background-color: rgba(128, 128, 128, 0.615);
+           color: white;
+      }
+      .containerOne {
+           background-image: url(bg.jpeg);
+           background-size: cover;
+           height: 550px;
+           background-attachment: fixed;
+           background-repeat: no-repeat;
+      }
+      .containerOne h1 {
+           text-align: center;
+           padding-top: 150px;
+           color: rgba(0, 0, 0, 0.666);
+           font-weight: 900;
+           font-size: 50px;
+           animation-name: fadeIn;
+           animation-duration: 3s;
+      }
+      
+      
+      .cards {
+           display: flex;
+           flex-direction: row;
+           text-align: center;
+           justify-content: center;
+           align-items: center;
+           margin: 50px;
+      }
+      
+      .cards .title1 {
+           background-color: rgba(0, 100, 0, 0.789);
+           color: azure;
+           width: 100%;
+           font-size: 1.8em;
+           padding: 50px;
+           margin-bottom: 30px;
+      }
+      .cards .title2 {
+           background-color: rgba(0, 0, 255, 0.718);
+           color: azure;
+           width: 100%;
+           font-size: 1.8em;
+           padding: 50px;
+           margin-bottom: 30px;
+      }
+      .cards .title3 {
+           background-color: rgba(0, 0, 0, 0.815);
+           color: azure;
+           width: 100%;
+           font-size: 1.8em;
+           padding: 50px;
+           margin-bottom: 30px;
+      }
+      
+      .firstCard,.secondCard,.thirdCard {
+           padding: 50px;
+           width: 80%;
+           background-color: azure;
+           box-shadow: 0 5px 25px rgba(1 1 1 / 30%);
+           margin: 30px;
+           border-radius: 30px;
+      }
+      
+      .cards .content p {
+           border-bottom: 1px solid darkblue;
+      }
+      
+      .button {
+           margin-top: 30px;
+           border-radius: 50px;
+           width: 70%;
+           display: inline-block;
+           background-color: brown;
+           transition: 0.7s ease;
+      }
+      .button a {
+           text-decoration: none;
+           font-size: 1.2em;
+           color: white;
+           font-weight: 400;
+           font-style: italic;
+      }
+      .button:hover {
+           transform: scale(1.1);
+      }
+      
+      
+      .containerTwo .rowOne {
+           display: flex;
+           flex-direction: row;
+           padding: 15px;
+           justify-content: center;
+      }
+      .containerTwo .rowOne p {
+           font-size: 1.1em;
+           margin: 30px;
+           padding: 15px;
+           border-radius: 5px;
+           transition: 0.5s ease;
+      
+      }
+      .containerTwo .rowOne p:hover {
+           background-color: darkgray;
+      }
+      .containerTwo .rowOne span {
+           font-size: larger;
+           font-weight: 600;
+           display: block;
+           text-align: center;
+      }
+      
+      p>a {
+           display: inline-block;
+           transition: 0.7s ease;
+      }
+      p>a:hover {
+           transform: scale(1.1);
+      }
+}
